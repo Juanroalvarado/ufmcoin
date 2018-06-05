@@ -1,9 +1,9 @@
-Building SmallChange
+Building UfmCoin
 
-See doc/readme-qt.rst for instructions on building smallchange-qt,
+See doc/readme-qt.rst for instructions on building ufmcoin-qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of SmallChange.
+implementation of UfmCoin.
 
-See doc/build-*.txt for instructions on building smallchange,
+See doc/build-*.txt for instructions on building ufmcoin,
 the intended-for-services, no-graphical-interface, reference
-implementation of SmallChange.
+implementation of UfmCoin.
