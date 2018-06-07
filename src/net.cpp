@@ -11,6 +11,7 @@
 #include "strlcpy.h"
 #include "addrman.h"
 #include "ui_interface.h"
+#include <boost/array.hpp>
 
 #ifdef WIN32
 #include <string.h>
