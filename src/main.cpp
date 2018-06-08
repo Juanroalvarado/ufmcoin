@@ -828,19 +828,14 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 5 * COIN;
+    int64 nSubsidy = 50 * COIN;
 
-
-    if(nHeight < 17280) // no block reward within the first 3 days
-        nSubsidy = 0;
-    if(nHeight > 10519200) // no block reward after 5 years
-        nSubsidy = 0;
 
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1 * 24 * 60 * 60; // UfmCoin: 0.35 days
-static const int64 nTargetSpacing = 20; // UfmCoin: 15 seconds
+static const int64 nTargetTimespan = 60; // UfmCoin: 0.35 days
+static const int64 nTargetSpacing = 10; // UfmCoin: 15 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
@@ -2031,7 +2026,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1528138293;
+        block.nTime    = 1528138294;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 2085386442;
 
